@@ -1,0 +1,22 @@
+html {
+--primary-color:#296073;
+--secondary-color:#344A53;
+--triple-color:#00c9a7;
+--fourth-color: #a9a9a9;
+}
+
+h1{
+  color: var(--primary-color);
+}
+
+nav{
+  color: var(--triple-color);
+}
+
+body{
+  background: url(https://cdn.pixabay.com/photo/2015/03/27/21/33/dream-catcher-695254_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 375px 900px;
+}
+
