@@ -5,14 +5,13 @@ html {
 --fourth-color: #C1532D;
 }
 
-/*optional photo:https://cdn.pixabay.com/photo/2015/03/27/21/33/dream-catcher-695254_960_720.jpg*/
+/*optional https://i.etsystatic.com/8019895/r/il/8d59f1/1183057532/il_794xN.1183057532_7au1.jpg or photo:https://cdn.pixabay.com/photo/2015/03/27/21/33/dream-catcher-695254_960_720.jpg*/
+/*background-repeat: no-repeat;
+  background-size: cover;*/
 body {
-  background: url(https://i.etsystatic.com/8019895/r/il/8d59f1/1183057532/il_794xN.1183057532_7au1.jpg);
-  background-repeat: no-repeat;
-  background-size: 400px 1700px;
+  background: lightgray;
   font-family: "Tangerine", cursive;
   font-size: 16px;
-  justify-content: center;
 }
 
 h1 {
@@ -41,17 +40,14 @@ p {
 figure,
 img {
   padding: 1rem;
-  max-width: 100%;
   justify-content: center;
+  max-width: 100%;
 }
 header {
   padding: 1rem;
   text-align: center;
 }
-nav ul {
-  display: flex;
-  justify-content: space-around;
-}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -64,9 +60,45 @@ p {
 }
 nav li {
   display: inline-block;
+  font-size: 1em;
 }
 footer {
   color: var(--text-primary-color);
   padding: 1.5rem;
   text-align: center;
+}
+
+.button {
+  background: darkgray;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.button a {
+  text-decoration: none;
+}
+
+/*hides images or things on mobile*/
+.mobile-hidden{
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 885px){
+  #hero {
+    background: url(https://source.unsplash.com/random/800x600) center center no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 100vw;
+  }
+  .flex--sm {
+    display: flex;
+  }
 }
