@@ -1,22 +1,22 @@
 html {
---primary-color:#90754C;
---secondary-color:#59431D;
---triple-color:#007663;
---fourth-color: #C1532D;
+--primary-color:#0C1C2C;
+--secondary-color:#5DBCD2;
+--triple-color:	#20828C;
+--fourth-color: 	#88BAC1;
 }
 
 /*optional https://i.etsystatic.com/8019895/r/il/8d59f1/1183057532/il_794xN.1183057532_7au1.jpg or photo:https://cdn.pixabay.com/photo/2015/03/27/21/33/dream-catcher-695254_960_720.jpg*/
 /*background-repeat: no-repeat;
   background-size: cover;*/
 body {
-  background: lightgray;
+  background: #0C1C2C;
   font-family: "Tangerine", cursive;
   font-size: 16px;
 }
 
 h1 {
   color: black;
-  font-size: 4.209em;
+  font-size: 2.209em;
   text-align: 10 5rem;
 }
 
@@ -69,7 +69,7 @@ footer {
 }
 
 .button {
-  background: darkgray;
+  background: #20828C;
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
