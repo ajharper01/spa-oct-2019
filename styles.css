@@ -1,8 +1,8 @@
 html {
---primary-color:#0C1C2C;
---secondary-color:#5DBCD2;
---triple-color:	#20828C;
---fourth-color: 	#88BAC1;
+  --primary-color:#0C1C2C;
+  --secondary-color:#5DBCD2;
+  --triple-color:	#20828C;
+  --fourth-color: 	#88BAC1;
 }
 
 /*optional https://i.etsystatic.com/8019895/r/il/8d59f1/1183057532/il_794xN.1183057532_7au1.jpg or photo:https://cdn.pixabay.com/photo/2015/03/27/21/33/dream-catcher-695254_960_720.jpg*/
@@ -15,19 +15,20 @@ body {
 }
 
 h1 {
-  color: black;
+  color: whitesmoke;
   font-size: 2.209em;
   text-align: 10 5rem;
 }
 
 h2 {
-  color: var(--primary-color);
+  color: var(whitesmoke);
   font-size: 4.209em;
   text-align: 10 5rem;
+  margin: 0
 }
 
 h3 {
-  color: var(--primary-color);
+  color: var(whitesmoke);
   font-size: 4.209em;
   text-align: 10 5rem;
 }
@@ -35,6 +36,7 @@ h3 {
 li,
 p {
   font-size: 1.777em;
+  color: whitesmoke;
 }
 /*makes the selected images at most 100% of the parent*/
 figure,
@@ -57,6 +59,7 @@ p {
     Second number is left and right. */
   padding: 0 2.5rem;
   text-align: center;
+  margin: 0
 }
 nav li {
   display: inline-block;
@@ -79,7 +82,7 @@ footer {
 }
 
 /*hides images or things on mobile*/
-.mobile-hidden{
+.mobile-hidden {
   display: none;
 }
 
@@ -91,9 +94,9 @@ footer {
   justify-content: space-around;
 }
 
-@media screen and (min-width: 885px){
+@media screen and (min-width: 885px) {
   #hero {
-    background: url(https://source.unsplash.com/random/800x600) center center no-repeat;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/3/32/Dream_IT_Solutions_Logo.jpg) center center no-repeat;
     background-size: cover;
     height: 40vh;
     width: 100vw;
@@ -101,4 +104,12 @@ footer {
   .flex--sm {
     display: flex;
   }
+}
+
+#gallery div {
+  border-bottom: medium;
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+margin: 2 rem 0;
 }
