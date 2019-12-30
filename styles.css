@@ -237,7 +237,18 @@ networks: linkedin '\eac9' #0077b5, facebook '\e603' #3b5998, twitter '\e618' #0
 .justify-space-between {
   justify-content: space-between;
 }
+.card {
+ background-color: #0C1C2C;
+  padding: 20px;
+  margin-top: 20px;
+}
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* I set a breakpoint of 768px for my first MEDIA QUERY.(PHONE) */
 
