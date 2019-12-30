@@ -1,17 +1,29 @@
+/*Main CSS*/
 html {
-  --primary-color:#0C1C2C;
-  --secondary-color:#5DBCD2;
-  --triple-color:	#20828C;
+  --primary-color:#000519;
+  --secondary-color:#04305A;
+  --triple-color:	:	#1092FF;
   --fourth-color:	#88BAC1;
+  --fifth-color: #0C1C2C;
+
 }
 body {
-  font-family: "Gentium Book Basic", serif;;
-  font-size: 10px;
-  height: 100vh; /* viewport heights */
+  font-family: 'Metamorphous', cursive;
+  /*font-family: 'Gruppo', cursive;
+font-family: 'Calligraffitti', cursive;
+font-family: 'Cormorant SC', serif;
+font-family: 'Metamorphous', cursive;
+font-family: "Gentium Book Basic", serif*/
+  font-size: 12px;
+  height: 100vh;
+  text-shadow: darkgray;
+  background-color: #000519; /* viewport heights */
 }
 h1 {
-  color: var(--text-primary-color);
-  font-size: 4.209em;
+  color: whitesmoke;
+  font-size: 8.209em;
+  font-family: 'Tangerine', cursive;
+  text-shadow: 2px 2px 5px whitesmoke;
 }
 h2 {
   font-size: 3.157em;
@@ -19,6 +31,7 @@ h2 {
 }
 h3 {
   font-size: 2.369em;
+  font-family: 'Cormorant SC', serif;
 }
 li,
 p,
@@ -26,6 +39,7 @@ label,
 input,
 button {
   font-size: 1.777em;
+  color: #88BAC1;
 }
 figure,
 img {
@@ -33,7 +47,7 @@ img {
   max-width: 100%;
 }
 header {
-  background-color: var(--primary-color);
+  background-color:var(--primary-color);
   padding: 1rem;
   text-align: center;
 }
@@ -47,6 +61,7 @@ p {
     Second number is left and right. */
   padding: 0 2.5rem;
   text-align: center;
+  color: #88BAC1;
 }
 label {
   margin-right: 0.25rem;
@@ -56,30 +71,145 @@ input {
   border-radius: 3px;
 }
 footer {
-  background: var(--primary-color);
-  color: var(--text-primary-color);
+  color: #88BAC1;
   padding: 1.5rem;
   text-align: center;
-}
-.social-icons > ul {
-  list-style-type: none;
-}
-[class$="-metro-but-16"] a, [class*="-metro-but-16"] a {
-  float: left;
-  position: relative;
-  padding: 8px;
-  line-height: 15px;
+
+/*SCSS for Social Media Icons */
+@font-face {
+  font-family: 'icomoon';
+  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?3qkin2');
+  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?#iefix3qkin2') format('embedded-opentype'),
+      url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.woff?3qkin2') format('woff'),
+      url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2') format('truetype'),
+      url('fhttps://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.svg?3qkin2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/* Scope this for just #gallery. */
-#gallery div {
-  border-bottom: solid thin var(--secondary-color);
+.social-networks {
+margin: 35px 0 35px;
+padding: 0;
+font-size: 0;
+text-align: center;
+
+li {
+  display: inline-block;
+}
+
+a {
+  display: block;
+  position: relative;
+  margin: 0 7px;
+  width: 68px;
+  height: 68px;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  text-decoration: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin-top: -50%;
+    margin-left: -50%;
+    border-radius: 100px;
+    background-color: #1f2027;
+    transition: all 400ms;
+  }
+
+  &:after {
+    position: relative;
+    display: block;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #fff;
+    font-size: 26px;
+    line-height: 66px;
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+&.spin-icon a:hover:after, &.spin-icon a:focus:after {
+  transition: transform 0.4s ease-out;
+  transform: rotateZ(360deg);
+}
+
+&.square a:hover:before, &.square a:focus:before {
+  border-radius: 0;
+}
+
+&.bounce a:hover, &.bounce a:focus {
+  animation: bounce 1s;
+}
+
+networks: linkedin '\eac9' #0077b5, facebook '\e603' #3b5998, twitter '\e618' #00b0ed, github '\eab1' #4183c4, instagram '\e604' #3f729b;
+
+@each $network in $networks {
+   .icon-#{nth($network, 1)} {
+     &:after {
+       content: '#{nth($network, 2)}';
+    }
+
+    &:hover:before, &:focus:before {
+      background: nth($network, 3);
+    }
+  }
+}
+}
+
+@keyframes bounce {
+0%, 20%, 53%, 80%, 100% {
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transform: translate3d(0,0,0);
+}
+
+40% {
+  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+  transform: translate3d(0, -6px, 0);
+}
+
+70% {
+  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+  transform: translate3d(0, -4px, 0);
+}
+
+90% {
+  transform: translate3d(0,-2px,0);
+}
+}
+}
+
+/* Flex for DREAMS */
+
+#Dreams div {
+  border-bottom: solid thick var(--secondary-color);
   margin: 2rem 0;
   padding-bottom: 2rem;
   text-align: center;
+  color: whitesmoke;
 }
+#Dreams {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*classes*/
+
 .button {
-  background: var(--secondary-color);
+  background: #88BAC1;
   border-radius: 3px;
   padding: 0.5rem;
 }
@@ -90,8 +220,6 @@ footer {
 .button a {
   text-decoration: none;
 }
-/* If your width and height are the same,
-  border-radius: 50% will make it look like a circle. */
 .button--circle {
   border-radius: 50%;
   height: 8rem;
@@ -109,20 +237,21 @@ footer {
 .justify-space-between {
   justify-content: space-between;
 }
-/* We set a breakpoint of 768px. */
+
+
+/* I set a breakpoint of 768px for my first MEDIA QUERY.(PHONE) */
+
 @media screen and (min-width: 768px) {
   .flex--sm {
-    /* By default, flexbox puts all the children in a row. */
-    display: flex;
-  }
-  .social-icons {
     display: flex;
   }
 }
+
+/* I set a breakpoint of 885px for my second MEDIA QUERY.(TABLET) */
+
 @media screen and (min-width: 885px) {
-  #hero {
-    background: url(https://source.unsplash.com/random/800x600) top center
-      no-repeat;
+  #mainPageImage {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/3/32/Dream_IT_Solutions_Logo.jpg) top center no-repeat;
     background-size: cover;
     height: 75vh;
     width: 100vw;
@@ -135,23 +264,25 @@ footer {
   #gallery > div {
     width: 50vw;
   }
-  .social-icons {
-    display: flex;
-  }
 }
+
+/* I set a breakpoint of 1440px for my third MEDIA QUERY.(Desktop) */
+
 @media screen and (min-width: 1440px) {
   figure {
     margin: 0;
   }
   /* Direct child selector. */
-  #gallery > div {
+  #Dreams > div {
     /* TODO: Look up box-shadow on MDN. */
-    border: solid 3px var(--secondary-color);
-    border-radius: 0.25rem;
-    margin: 2rem 1rem;
-    width: calc(33vw - 2rem);
+    border-bottom: solid thin var(--secondary-color);
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    text-align: center;
   }
-  .social-icons {
-    display: flex;
+  #Dreams > div {
+    width: 33vw;
   }
 }
+
+
