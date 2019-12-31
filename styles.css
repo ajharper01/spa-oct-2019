@@ -2,7 +2,7 @@
 html {
   --primary-color:#000519;
   --secondary-color:#04305A;
-  --triple-color:	:	#1092FF;
+  --triple-color:	#1092FF;
   --fourth-color:	#88BAC1;
   --fifth-color: #0C1C2C;
 
@@ -72,126 +72,68 @@ input {
 }
 footer {
   color: #88BAC1;
-  padding: 1.5rem;
-  text-align: center;
-
+  padding: 0;
+  margin: 0;
+}
 /*SCSS for Social Media Icons */
-@font-face {
-  font-family: 'icomoon';
-  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?3qkin2');
-  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?#iefix3qkin2') format('embedded-opentype'),
-      url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.woff?3qkin2') format('woff'),
-      url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2') format('truetype'),
-      url('fhttps://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.svg?3qkin2#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .social-networks {
-margin: 35px 0 35px;
-padding: 0;
-font-size: 0;
-text-align: center;
-
-li {
-  display: inline-block;
-}
-
-a {
-  display: block;
-  position: relative;
-  margin: 0 7px;
-  width: 68px;
-  height: 68px;
-  font-size: 0;
-  line-height: 0;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
   text-align: center;
-  text-decoration: none;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    margin-top: -50%;
-    margin-left: -50%;
-    border-radius: 100px;
-    background-color: #1f2027;
-    transition: all 400ms;
+  }
+  .btn{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #flflfl;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
   }
 
-  &:after {
-    position: relative;
-    display: block;
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    color: #fff;
-    font-size: 26px;
-    line-height: 66px;
+  .btn i{
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.3s linear;
   }
 
-  &:hover, &:focus {
-    text-decoration: none;
+  .btn:hover i{
+  transform: scale(1.3);
+  color: #flflfl;
   }
-}
 
-&.spin-icon a:hover:after, &.spin-icon a:focus:after {
-  transition: transform 0.4s ease-out;
-  transform: rotateZ(360deg);
-}
-
-&.square a:hover:before, &.square a:focus:before {
-  border-radius: 0;
-}
-
-&.bounce a:hover, &.bounce a:focus {
-  animation: bounce 1s;
-}
-
-networks: linkedin '\eac9' #0077b5, facebook '\e603' #3b5998, twitter '\e618' #00b0ed, github '\eab1' #4183c4, instagram '\e604' #3f729b;
-
-@each $network in $networks {
-   .icon-#{nth($network, 1)} {
-     &:after {
-       content: '#{nth($network, 2)}';
-    }
-
-    &:hover:before, &:focus:before {
-      background: nth($network, 3);
-    }
+  .btn::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
   }
-}
-}
 
-@keyframes bounce {
-0%, 20%, 53%, 80%, 100% {
-  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  transform: translate3d(0,0,0);
-}
+  .btn:hover::before{
+  animation: aaa 0.7s 1;
+  }
 
-40% {
-  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  transform: translate3d(0, -6px, 0);
-}
-
-70% {
-  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  transform: translate3d(0, -4px, 0);
-}
-
-90% {
-  transform: translate3d(0,-2px,0);
-}
-}
-}
-
+  @keyframes aaa {
+  0% {
+  left: -110%;
+  top: 90%;
+  } 50%{
+  left: 10%;
+  top: -30%
+  } 100%{
+  top: -10%;
+  left: -10%
+  }
+  }
 /* Flex for DREAMS */
 
 #Dreams div {
@@ -238,7 +180,7 @@ networks: linkedin '\eac9' #0077b5, facebook '\e603' #3b5998, twitter '\e618' #0
   justify-content: space-between;
 }
 .card {
- background-color: #0C1C2C;
+  background-color: #0C1C2C;
   padding: 20px;
   margin-top: 20px;
 }
