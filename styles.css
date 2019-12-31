@@ -17,12 +17,13 @@ font-family: "Gentium Book Basic", serif*/
   font-size: 12px;
   height: 100vh;
   text-shadow: darkgray;
-  background-color: #000519; /* viewport heights */
+  background-color: black; /* viewport heights */
 }
-h1 {
+h1,
+.fab {
   color: whitesmoke;
   font-size: 8.209em;
-  font-family: 'Tangerine', cursive;
+  /* font-family: 'Tangerine', cursive; */
   text-shadow: 2px 2px 5px whitesmoke;
 }
 h2 {
@@ -63,77 +64,40 @@ p {
   text-align: center;
   color: #88BAC1;
 }
+form div {
+  /* margin-bottom: 0.5rem;
+  max-width: 18rem; */
+  margin: 0.25rem 0;
+  width: 78vw;
+}
 label {
   margin-right: 0.25rem;
 }
 input {
+  /* border: solid thin var(--primary-color);
+  border-radius: 3px; */
+  width: 100%;
+}
+
+input[type="radio"] {
+  width: 2.5rem;
+}
+
+input,
+textarea {
   border: solid thin var(--primary-color);
   border-radius: 3px;
 }
+
 footer {
+  background: var(--primary-color);
   color: #88BAC1;
-  padding: 0;
-  margin: 0;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
 }
 /*SCSS for Social Media Icons */
-.social-networks {
-  position:absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: center;
-  }
-  .btn{
-  display: inline-block;
-  width: 90px;
-  height: 90px;
-  background: #flflfl;
-  margin: 10px;
-  border-radius: 30%;
-  box-shadow: 0 5px 15px -5px #00000070;
-  color: #3498db;
-  overflow: hidden;
-  position: relative;
-  }
 
-  .btn i{
-  line-height: 90px;
-  font-size: 26px;
-  transition: 0.3s linear;
-  }
-
-  .btn:hover i{
-  transform: scale(1.3);
-  color: #flflfl;
-  }
-
-  .btn::before{
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  background: #3498db;
-  transform: rotate(45deg);
-  left: -110%;
-  top: 90%;
-  }
-
-  .btn:hover::before{
-  animation: aaa 0.7s 1;
-  }
-
-  @keyframes aaa {
-  0% {
-  left: -110%;
-  top: 90%;
-  } 50%{
-  left: 10%;
-  top: -30%
-  } 100%{
-  top: -10%;
-  left: -10%
-  }
-  }
 /* Flex for DREAMS */
 
 #Dreams div {
@@ -143,17 +107,25 @@ footer {
   text-align: center;
   color: whitesmoke;
 }
-#Dreams {
+/* #Dreams {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 /*classes*/
+.align-center {
+  align-items: center;
+}
 
 .button {
   background: #88BAC1;
   border-radius: 3px;
   padding: 0.5rem;
+}
+h1:focus,
+h1:hover {
+  background: aquamarine;
+  transition: background 2s ease-in;
 }
 .button--submit {
   background-color: lightslategray;
@@ -195,6 +167,12 @@ footer {
 /* I set a breakpoint of 768px for my first MEDIA QUERY.(PHONE) */
 
 @media screen and (min-width: 768px) {
+  form {
+    padding: 1rem 0;
+  }
+  form > div {
+    max-width: none;
+  }
   .flex--sm {
     display: flex;
   }
@@ -204,7 +182,7 @@ footer {
 
 @media screen and (min-width: 885px) {
   #mainPageImage {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/3/32/Dream_IT_Solutions_Logo.jpg) top center no-repeat;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/3/32/Dream_IT_Solutions_Logo.jpg)top center no-repeat;
     background-size: cover;
     height: 75vh;
     width: 100vw;
@@ -214,7 +192,7 @@ footer {
     flex-wrap: wrap;
   }
   /* Direct child selector. */
-  #gallery > div {
+  #Dreams > div {
     width: 50vw;
   }
 }
@@ -228,14 +206,18 @@ footer {
   /* Direct child selector. */
   #Dreams > div {
     /* TODO: Look up box-shadow on MDN. */
-    border-bottom: solid thin var(--secondary-color);
-    margin: 2rem 0;
-    padding-bottom: 2rem;
-    text-align: center;
-  }
-  #Dreams > div {
-    width: 33vw;
+    border: solid 3px var(--secondary-color);
+    border-radius: 0.25rem;
+    margin: 2rem 1rem;
+    width: calc(33vw - 2rem);
+    /* padding-bottom: 2rem; */
+    /* text-align: center; */
+    /* width: 33vw; */
   }
 }
 
-
+.fab:focus,
+.fab:hover {
+  transition: transform 2s;
+  transform: rotate(2rad);
+}
