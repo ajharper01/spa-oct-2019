@@ -1,4 +1,12 @@
-//querySelector accepts any css selector as a string.
-const signUp = document.querySelector("Sign Up");
+// Query Selector accepts ANY CSS Selector as a string.
+const contactUs = document.querySelector("Contact Us");
 
-console.log(signUp);
+/**
+ * 1. Listen for an Event.
+ * 2. Use a CB fxn. when this event occurs.
+ */
+contactUs.addEventListener("submit", function(event) {
+  event.preventDefault();
+});
+
+console.log(contactUs);
