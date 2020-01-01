@@ -95,7 +95,7 @@ footer {
 
 /* Flex for DREAMS */
 
-#Dreams div {
+#IdeaEngine div {
   border-bottom: solid thick var(--secondary-color);
   margin: 2rem 0;
   padding-bottom: 2rem;
@@ -194,7 +194,7 @@ footer {
     flex-wrap: wrap;
   }
   /* Direct child selector. */
-  #Dreams > div {
+  #IdeaEngine > div {
     width: 50vw;
   }
 }
@@ -206,7 +206,7 @@ footer {
     margin: 0;
   }
   /* Direct child selector. */
-  #Dreams > div {
+  #IdeaEngine > div {
     /* TODO: Look up box-shadow on MDN. */
     border: solid 3px var(--secondary-color);
     border-radius: 0.25rem;
