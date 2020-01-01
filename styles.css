@@ -1,14 +1,13 @@
 /*Main CSS*/
 html {
   --primary-color:#000519;
-  --secondary-color:#04305A;
+  --secondary-color:#ffffff;
   --triple-color:	#1092FF;
-  --fourth-color:	#88BAC1;
-  --fifth-color: #0C1C2C;
-
+  --fourth-color:	lightslategray;
+  --fifth-color: #1d1d1f;
 }
 body {
-  font-family: 'Metamorphous', cursive;
+  font-family: "Gentium Book Basic", serif;
   /*font-family: 'Gruppo', cursive;
 font-family: 'Calligraffitti', cursive;
 font-family: 'Cormorant SC', serif;
@@ -16,11 +15,9 @@ font-family: 'Metamorphous', cursive;
 font-family: "Gentium Book Basic", serif*/
   font-size: 12px;
   height: 100vh;
-  text-shadow: darkgray;
   background-color: black; /* viewport heights */
 }
-h1,
-.fab {
+h1 {
   color: whitesmoke;
   font-size: 8.209em;
   /* font-family: 'Tangerine', cursive; */
@@ -32,7 +29,6 @@ h2 {
 }
 h3 {
   font-size: 2.369em;
-  font-family: 'Cormorant SC', serif;
 }
 li,
 p,
@@ -40,7 +36,7 @@ label,
 input,
 button {
   font-size: 1.777em;
-  color: #88BAC1;
+  color: var(--fourth-color);
 }
 figure,
 img {
@@ -48,7 +44,7 @@ img {
   max-width: 100%;
 }
 header {
-  background-color:var(--primary-color);
+  background-color: black;
   padding: 1rem;
   text-align: center;
 }
@@ -62,7 +58,7 @@ p {
     Second number is left and right. */
   padding: 0 2.5rem;
   text-align: center;
-  color: #88BAC1;
+  color: var(--fourth-color);
 }
 form div {
   /* margin-bottom: 0.5rem;
@@ -90,8 +86,7 @@ textarea {
 }
 
 footer {
-  background: var(--primary-color);
-  color: #88BAC1;
+  color: var(--fourth-color);
   padding: 1.5rem;
   text-align: center;
   display: flex;
@@ -118,12 +113,11 @@ footer {
 }
 
 .button {
-  background: #88BAC1;
   border-radius: 3px;
   padding: 0.5rem;
 }
-h1:focus,
-h1:hover {
+.button:focus,
+.button:hover {
   background: aquamarine;
   transition: background 2s ease-in;
 }
@@ -139,6 +133,12 @@ h1:hover {
   height: 8rem;
   width: 8rem;
 }
+.fab {
+  color: whitesmoke;
+  font-size: 4.209em;
+  /* font-family: 'Tangerine', cursive; */
+  text-shadow: 2px 2px 5px whitesmoke;
+}
 .flex {
   display: flex;
 }
@@ -152,11 +152,13 @@ h1:hover {
   justify-content: space-between;
 }
 .card {
-  background-color: #0C1C2C;
+  background-color: var(--fifth-color);
   padding: 20px;
   margin-top: 20px;
 }
-
+.pic {
+  width: 375px;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
