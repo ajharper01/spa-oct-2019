@@ -19,7 +19,7 @@ font-family: "Gentium Book Basic", serif*/
 }
 h1 {
   color: whitesmoke;
-  font-size: 8.209em;
+  font-size: 4.209em;
   /* font-family: 'Tangerine', cursive; */
   text-shadow: 2px 2px 5px whitesmoke;
 }
@@ -142,6 +142,9 @@ footer {
 .flex {
   display: flex;
 }
+.headshot {
+  border-radius: 50%;
+}
 .justify-center {
   justify-content: center;
 }
@@ -178,13 +181,16 @@ footer {
   .flex--sm {
     display: flex;
   }
+  h1 {
+    font-size: 2.103em;
+  }
 }
 
 /* I set a breakpoint of 885px for my second MEDIA QUERY.(TABLET) */
 
 @media screen and (min-width: 885px) {
   #mainPageImage {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/3/32/Dream_IT_Solutions_Logo.jpg)top center no-repeat;
+    background: url(https://www.thebluediamondgallery.com/wooden-tile/images/solutions.jpg) top center no-repeat;
     background-size: cover;
     height: 75vh;
     width: 100vw;
