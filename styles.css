@@ -118,7 +118,7 @@ footer {
 }
 .button:focus,
 .button:hover {
-  background: aquamarine;
+  background: lightslategray;
   transition: background 2s ease-in;
 }
 .button--submit {
@@ -216,11 +216,9 @@ footer {
     /* TODO: Look up box-shadow on MDN. */
     border: solid 3px var(--secondary-color);
     border-radius: 0.25rem;
-    margin: 2rem 1rem;
-    width: calc(33vw - 2rem);
-    /* padding-bottom: 2rem; */
-    /* text-align: center; */
-    /* width: 33vw; */
+    padding-bottom: 2rem;
+    text-align: center;
+    width: 33vw;
   }
 }
 
