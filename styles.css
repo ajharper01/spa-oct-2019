@@ -64,7 +64,7 @@ form div {
   /* margin-bottom: 0.5rem;
   max-width: 18rem; */
   margin: 0.25rem 0;
-  width: 78vw;
+  width: 75vw;
 }
 label {
   margin-right: 0.25rem;
@@ -91,9 +91,6 @@ footer {
   text-align: center;
   display: flex;
 }
-/*SCSS for Social Media Icons */
-
-/* Flex for DREAMS */
 
 #IdeaEngine div {
   border-bottom: solid thick var(--secondary-color);
@@ -102,10 +99,6 @@ footer {
   text-align: center;
   color: whitesmoke;
 }
-/* #Dreams {
-  display: flex;
-  flex-wrap: wrap;
-} */
 
 /*classes*/
 .align-center {
@@ -115,11 +108,13 @@ footer {
 .button {
   border-radius: 3px;
   padding: 0.5rem;
+  text-decoration: none
 }
 .button:focus,
 .button:hover {
   background: lightslategray;
   transition: background 2s ease-in;
+  color: black;
 }
 .button--submit {
   background-color: lightslategray;
@@ -127,11 +122,31 @@ footer {
 }
 .button a {
   text-decoration: none;
+  color: whitesmoke;
 }
 .button--circle {
   border-radius: 50%;
   height: 8rem;
   width: 8rem;
+}
+.card {
+  background-color: var(--fifth-color);
+  padding: 20px;
+  margin-top: 20px;
+}
+.contact-form {
+  margin: 40px;
+  padding: 20px;
+}
+
+.contact-input, .contact-textbox {
+  padding: 8px;
+  width: 80%;
+  margin: 4px 0px;
+}
+
+.contact-form .contact-area {
+  padding-bottom: 15px;
 }
 .fab {
   color: whitesmoke;
@@ -139,11 +154,19 @@ footer {
   /* font-family: 'Tangerine', cursive; */
   text-shadow: 2px 2px 5px whitesmoke;
 }
+/*in the future add animation css here*/
+.fab:focus,
+.fab:hover {
+  transition: transform 1s;
+  transform: rotate(6.25rad);
+}
 .flex {
   display: flex;
 }
-.headshot {
+.head-shot {
   border-radius: 50%;
+  max-width: 50%;
+  justify-self: right;
 }
 .justify-center {
   justify-content: center;
@@ -154,14 +177,9 @@ footer {
 .justify-space-between {
   justify-content: space-between;
 }
-.card {
-  background-color: var(--fifth-color);
-  padding: 20px;
-  margin-top: 20px;
-}
-.pic {
+/* .pic {
   width: 375px;
-}
+} */
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -176,10 +194,10 @@ footer {
     padding: 1rem 0;
   }
   form > div {
-    max-width: none;
+    max-width: 75vw;
   }
   .flex--sm {
-    display: flex;
+    flex-wrap: wrap;
   }
   h1 {
     font-size: 2.103em;
@@ -196,11 +214,10 @@ footer {
     width: 100vw;
   }
   .flex--md {
-    display: flex;
     flex-wrap: wrap;
   }
   /* Direct child selector. */
-  #IdeaEngine > div {
+  #Method > div {
     width: 50vw;
   }
 }
@@ -211,19 +228,16 @@ footer {
   figure {
     margin: 0;
   }
+  .flex--lg {
+    flex-wrap: wrap;
+  }
   /* Direct child selector. */
-  #IdeaEngine > div {
-    /* TODO: Look up box-shadow on MDN. */
+  #Method > div {
+    box-shadow:mistyrose
     border: solid 3px var(--secondary-color);
     border-radius: 0.25rem;
     padding-bottom: 2rem;
     text-align: center;
     width: 33vw;
   }
-}
-
-.fab:focus,
-.fab:hover {
-  transition: transform 2s;
-  transform: rotate(2rad);
 }
