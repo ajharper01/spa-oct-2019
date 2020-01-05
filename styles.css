@@ -177,7 +177,9 @@ footer {
     font-size: 2.103em;
   }
 }
-
+.img {
+  max-width: 40%;
+}
 /* I set a breakpoint of 885px for my second MEDIA QUERY.(TABLET)*/
 
 @media screen and (min-width: 885px) {
