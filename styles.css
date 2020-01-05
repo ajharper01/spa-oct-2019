@@ -1,6 +1,6 @@
 /*Main CSS*/
 html {
-  --primary-color:#000519;
+  --primary-color:#0429bb;
   --secondary-color:#ffffff;
   --triple-color:	#1092FF;
   --fourth-color:	lightslategray;
@@ -30,6 +30,7 @@ h2 {
 h3 {
   font-size: 2.369em;
 }
+
 li,
 p,
 label,
@@ -44,7 +45,7 @@ img {
   max-width: 100%;
 }
 header {
-  background-color: black;
+  background-color: var(--primary-color);
   padding: 1rem;
   text-align: center;
 }
@@ -70,34 +71,19 @@ label {
   margin-right: 0.25rem;
 }
 input {
-  /* border: solid thin var(--primary-color);
-  border-radius: 3px; */
+  border: solid thin var(--primary-color);
+  border-radius: 3px;
   width: 100%;
 }
-
-input[type="radio"] {
-  width: 2.5rem;
-}
-
 input,
 textarea {
-  border: solid thin var(--primary-color);
+  border: 1mm ridge var(--primary-color);
   border-radius: 3px;
 }
 
 footer {
   color: var(--fourth-color);
-  padding: 1.5rem;
-  text-align: center;
-  display: flex;
-}
-
-#IdeaEngine div {
-  border-bottom: solid thick var(--secondary-color);
-  margin: 2rem 0;
-  padding-bottom: 2rem;
-  text-align: center;
-  color: whitesmoke;
+  padding: .5rem;
 }
 
 /*classes*/
@@ -112,22 +98,13 @@ footer {
 }
 .button:focus,
 .button:hover {
+  border: solid thin var(--primary-color);
   background: lightslategray;
-  transition: background 2s ease-in;
-  color: black;
-}
-.button--submit {
-  background-color: lightslategray;
-  color: white;
+  transition: background 1s ease-in;
 }
 .button a {
   text-decoration: none;
   color: whitesmoke;
-}
-.button--circle {
-  border-radius: 50%;
-  height: 8rem;
-  width: 8rem;
 }
 .card {
   background-color: var(--fifth-color);
@@ -137,16 +114,7 @@ footer {
 .contact-form {
   margin: 40px;
   padding: 20px;
-}
-
-.contact-input, .contact-textbox {
-  padding: 8px;
-  width: 80%;
-  margin: 4px 0px;
-}
-
-.contact-form .contact-area {
-  padding-bottom: 15px;
+  contain: content;
 }
 .fab {
   color: whitesmoke;
@@ -157,11 +125,12 @@ footer {
 /*in the future add animation css here*/
 .fab:focus,
 .fab:hover {
-  transition: transform 1s;
-  transform: rotate(6.25rad);
+  transition: transform .5s;
+  transform: rotate(1turn);
 }
 .flex {
   display: flex;
+  justify-content: center;
 }
 .head-shot {
   border-radius: 50%;
@@ -177,14 +146,19 @@ footer {
 .justify-space-between {
   justify-content: space-between;
 }
-/* .pic {
-  width: 375px;
-} */
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+#Method div {
+  border-bottom: solid thick var(--primary-color);
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: whitesmoke;
+  justify-content: center;
 }
 
 /* I set a breakpoint of 768px for my first MEDIA QUERY.(PHONE) */
@@ -204,7 +178,7 @@ footer {
   }
 }
 
-/* I set a breakpoint of 885px for my second MEDIA QUERY.(TABLET) */
+/* I set a breakpoint of 885px for my second MEDIA QUERY.(TABLET)*/
 
 @media screen and (min-width: 885px) {
   #mainPageImage {
@@ -213,31 +187,32 @@ footer {
     height: 75vh;
     width: 100vw;
   }
+  #Organized {
+    background: url(https://www.thebluediamondgallery.com/wooden-tile/images/organize.jpg) top center no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width: 100vw;
+  }
   .flex--md {
     flex-wrap: wrap;
   }
-  /* Direct child selector. */
-  #Method > div {
-    width: 50vw;
+  figure {
+    max-width: 100%;
+    justify-content: center;
   }
 }
 
 /* I set a breakpoint of 1440px for my third MEDIA QUERY.(Desktop) */
 
 @media screen and (min-width: 1440px) {
-  figure {
-    margin: 0;
-  }
   .flex--lg {
     flex-wrap: wrap;
   }
-  /* Direct child selector. */
   #Method > div {
-    box-shadow:mistyrose
+    box-shadow: var(--primary-color);
     border: solid 3px var(--secondary-color);
     border-radius: 0.25rem;
     padding-bottom: 2rem;
     text-align: center;
-    width: 33vw;
   }
 }
