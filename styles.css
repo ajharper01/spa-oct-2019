@@ -1,13 +1,12 @@
 /*Main CSS*/
 html {
-  --primary-color:#0429bb;
-  --secondary-color:#ffffff;
-  --triple-color:	#1092FF;
-  --fourth-color:	lightslategray;
-  --fifth-color: #1d1d1f;
+  --first-color: #0429bb;
+  --second-color: #ffffff;
+  --third-color: #778899;
+  --fourth-color: #1d1d1f;
 }
 body {
-  font-family: "Gentium Book Basic", serif;
+  font-family: "Gruppo", cursive;
   /*font-family: 'Gruppo', cursive;
 font-family: 'Calligraffitti', cursive;
 font-family: 'Cormorant SC', serif;
@@ -37,7 +36,7 @@ label,
 input,
 button {
   font-size: 1.777em;
-  color: var(--fourth-color);
+  color: var(--third-color);
 }
 figure,
 img {
@@ -45,7 +44,7 @@ img {
   max-width: 100%;
 }
 header {
-  background-color: var(--primary-color);
+  background-color: var(--first-color);
   padding: 1rem;
   text-align: center;
 }
@@ -59,7 +58,7 @@ p {
     Second number is left and right. */
   padding: 0 2.5rem;
   text-align: center;
-  color: var(--fourth-color);
+  color: var(--third-color);
 }
 form div {
   /* margin-bottom: 0.5rem;
@@ -71,19 +70,19 @@ label {
   margin-right: 0.25rem;
 }
 input {
-  border: solid thin var(--primary-color);
+  border: solid thin var(--first-color);
   border-radius: 3px;
   width: 100%;
 }
 input,
 textarea {
-  border: 1mm ridge var(--primary-color);
+  border: 1mm ridge var(--first-color);
   border-radius: 3px;
 }
 
 footer {
-  color: var(--fourth-color);
-  padding: .5rem;
+  color: var(--third-color);
+  padding: 0.5rem;
 }
 
 /*classes*/
@@ -94,11 +93,11 @@ footer {
 .button {
   border-radius: 3px;
   padding: 0.5rem;
-  text-decoration: none
+  text-decoration: none;
 }
 .button:focus,
 .button:hover {
-  border: solid thin var(--primary-color);
+  border: solid thin var(--first-color);
   background: lightslategray;
   transition: background 1s ease-in;
 }
@@ -107,7 +106,7 @@ footer {
   color: whitesmoke;
 }
 .card {
-  background-color: var(--fifth-color);
+  background-color: var(--third-color);
   padding: 20px;
   margin-top: 20px;
 }
@@ -125,7 +124,7 @@ footer {
 /*in the future add animation css here*/
 .fab:focus,
 .fab:hover {
-  transition: transform .5s;
+  transition: transform 0.5s;
   transform: rotate(1turn);
 }
 .flex {
@@ -153,7 +152,7 @@ footer {
 }
 
 #Method div {
-  border-bottom: solid thick var(--primary-color);
+  border-bottom: solid thick var(--first-color);
   margin: 2rem 0;
   padding-bottom: 2rem;
   text-align: center;
@@ -184,13 +183,15 @@ footer {
 
 @media screen and (min-width: 885px) {
   #mainPageImage {
-    background: url(https://www.thebluediamondgallery.com/wooden-tile/images/solutions.jpg) top center no-repeat;
+    background: url(https://www.thebluediamondgallery.com/wooden-tile/images/solutions.jpg)
+      top center no-repeat;
     background-size: cover;
     height: 75vh;
     width: 100vw;
   }
   #Organized {
-    background: url(https://www.thebluediamondgallery.com/wooden-tile/images/organize.jpg) top center no-repeat;
+    background: url(https://www.thebluediamondgallery.com/wooden-tile/images/organize.jpg)
+      top center no-repeat;
     background-size: cover;
     height: 75vh;
     width: 100vw;
@@ -211,8 +212,8 @@ footer {
     flex-wrap: wrap;
   }
   #Method > div {
-    box-shadow: var(--primary-color);
-    border: solid 3px var(--secondary-color);
+    box-shadow: var(--first-color);
+    border: solid 3px var(--second-color);
     border-radius: 0.25rem;
     padding-bottom: 2rem;
     text-align: center;
