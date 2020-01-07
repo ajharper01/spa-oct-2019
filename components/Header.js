@@ -1,4 +1,4 @@
 export default st => `
   <header>
-    <h1>${st.heading}</h1>
+    <h1>TEAM DREAM</h1>
   </header>`;

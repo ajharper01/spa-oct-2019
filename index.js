@@ -19,6 +19,14 @@ const state = {
   }
 };
 
-document.querySelector("#root").innerHTML = `${Header(
-  state.Home
-)} ${Nav()} ${Main()} ${Footer()}`;
+document.querySelector(
+  "#root"
+).innerHTML = `${Header()} ${Nav()} ${Main()} ${Footer()}`;
+
+//TODO: Listen for clicks on our menu and log what was clicked on.
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", function() {
+    event.preventDefault();
+    console.log(state[event.target.textContent]);
+  });
+});
