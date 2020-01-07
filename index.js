@@ -19,6 +19,6 @@ const state = {
   }
 };
 
-document.querySelector(
-  "#root"
-).innerHTML = `${Header()} ${Nav()} ${Main()} ${Footer()}`;
+document.querySelector("#root").innerHTML = `${Header(
+  state.Home
+)} ${Nav()} ${Main()} ${Footer()}`;
