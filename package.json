@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "npx browser-sync start --server --files *.html, *.css, *.js"
+    "serve": "parcel index.html"
   },
-  //delete broswer sync before capstone completion
 
   "keywords": [],
   "author": "",
