@@ -159,7 +159,14 @@ footer {
   color: whitesmoke;
   justify-content: center;
 }
-
+#Resources div {
+  border-bottom: solid thin var(--secondary-color);
+  border-radius: 0.25rem;
+  box-shadow: 0 1rem 1.5rem -3px rgba(0, 0, 0, 0.1), 0 0.4rem 0.6rem -2px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  text-align: center;
+}
 /* I set a breakpoint of 768px for my first MEDIA QUERY.(PHONE) */
 
 @media screen and (min-width: 768px) {
