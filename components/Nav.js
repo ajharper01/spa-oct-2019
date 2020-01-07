@@ -1,4 +1,4 @@
-`<nav>
+export default `<nav>
   <ul class="flex justify-space-around">
     <li class="button"><a href="#">Home</a></li class="button">
     <li class="button"><a href="./Contact/">Contact</a></li class="button">

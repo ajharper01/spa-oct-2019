@@ -1,3 +1,3 @@
-`<header>
+export default `<header>
   <h1>TEAM DREAM</h1>
 </header>`;

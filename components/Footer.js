@@ -1,4 +1,4 @@
-`<footer class="flex">
+export default `<footer class="flex">
   <div>
     <a href="https://twitter.com/AndrewH95335950/" class="icon-twitter"><span class="fab fa-twitter"></span></a>
     <a href="https://facebook.com/TheDreamKeep/" class="icon-facebook"><span class="fab fa-facebook"></span></a>
