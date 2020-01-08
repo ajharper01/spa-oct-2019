@@ -18,13 +18,14 @@ const state = {
   },
   Method: {
     heading: "Method"
-  }
+  },
+  Links: ["Home", "Contact", "Resources", "Keep", "Method"]
 };
 
 function render(st = state.Home) {
-  document.querySelector("#root").innerHTML = `${Header(st)} ${Nav(st)} ${Main(
-    st
-  )} ${Footer(st)}`;
+  document.querySelector("#root").innerHTML = `${Header(st)} ${Nav(
+    state.Links
+  )} ${Main(st)} ${Footer(st)}`;
 }
 
 render();
