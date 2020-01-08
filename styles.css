@@ -29,7 +29,6 @@ h2 {
 h3 {
   font-size: 2.369em;
 }
-
 li,
 p,
 label,
@@ -79,17 +78,14 @@ textarea {
   border: 1mm ridge var(--first-color);
   border-radius: 3px;
 }
-
 footer {
   color: var(--third-color);
   padding: 0.5rem;
 }
-
 /*classes*/
 .align-center {
   align-items: center;
 }
-
 .button {
   border-radius: 3px;
   padding: 0.5rem;
@@ -118,7 +114,6 @@ footer {
 .fab {
   color: whitesmoke;
   font-size: 4.209em;
-  /* font-family: 'Tangerine', cursive; */
   text-shadow: 2px 2px 5px whitesmoke;
 }
 /*in the future add animation css here*/
@@ -130,6 +125,9 @@ footer {
 .flex {
   display: flex;
   justify-content: center;
+}
+.flex--wrap {
+  flex-wrap: wrap;
 }
 .head-shot {
   border-radius: 50%;
@@ -162,10 +160,19 @@ footer {
 #Resources div {
   border-bottom: solid thin var(--secondary-color);
   border-radius: 0.25rem;
-  box-shadow: 0 1rem 1.5rem -3px rgba(0, 0, 0, 0.1), 0 0.4rem 0.6rem -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1rem 1.5rem -3px whitesmoke,
+    0 0.4rem 0.6rem -2px rgba(0, 0, 0, 0.05);
   margin: 2rem 0;
   padding-bottom: 2rem;
   text-align: center;
+  width: calc(33vw - 5rem);
+}
+#mainPageImage {
+  background: url(https://www.thebluediamondgallery.com/wooden-tile/images/solutions.jpg)
+    top center no-repeat;
+  background-size: cover;
+  height: 75vh;
+  width: 100vw;
 }
 /* I set a breakpoint of 768px for my first MEDIA QUERY.(PHONE) */
 
@@ -189,13 +196,6 @@ footer {
 /* I set a breakpoint of 885px for my second MEDIA QUERY.(TABLET)*/
 
 @media screen and (min-width: 885px) {
-  #mainPageImage {
-    background: url(https://www.thebluediamondgallery.com/wooden-tile/images/solutions.jpg)
-      top center no-repeat;
-    background-size: cover;
-    height: 75vh;
-    width: 100vw;
-  }
   #Organized {
     background: url(https://www.thebluediamondgallery.com/wooden-tile/images/organize.jpg)
       top center no-repeat;
