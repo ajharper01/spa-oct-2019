@@ -1,6 +1,8 @@
 // 'Destructure' each of the named components from the components directory.
 import { Header, Nav, Main, Footer } from "./components";
 
+import capitalize from "lodash.capitalize";
+
 const state = {
   Home: {
     heading: "Home"
@@ -30,6 +32,6 @@ render();
 document.querySelectorAll("nav a").forEach(link => {
   link.addEventListener("click", function() {
     event.preventDefault();
-    render(state[event.target.textContent]);
+    render(state[capitalize(event.target.textContent)]);
   });
 });
