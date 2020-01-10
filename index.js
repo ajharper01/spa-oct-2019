@@ -5,6 +5,11 @@ import capitalize from "lodash.capitalize";
 
 import * as state from "./store";
 
+import Navigo from "navigo";
+const router = new Navigo(location.origin);
+location.origin;
+router;
+
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `${Header(st)} ${Nav(
     state.Links
@@ -13,10 +18,18 @@ function render(st = state.Home) {
   render();
 }
 
-//TODO: Listen for clicks on our menu and log what was clicked on.
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", function() {
-    event.preventDefault();
-    render(state[capitalize(event.target.textContent)]);
-  });
+
+
+router.on(":page", params => {
+  console.log(params.page);
 });
+
+on("/", () => render()) .recolve())
+<a class="button"><a href="./_link.tolowerCase"/" data-nagio#>qdt lehone""Orga]ized"}
+} data navigo.> data navigo>${link"}</a></li>,
+
+router.upread list
+
+function createListHTML(links){
+  return links .map(link=> `<a class="button"><a href="./${_link.tolowerCase()" data-navigo>${link}</a></li>`).join(" ");
+}
