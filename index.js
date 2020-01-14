@@ -6,9 +6,10 @@ import capitalize from "lodash.capitalize";
 import * as state from "./store";
 
 import Navigo from "navigo";
+
+import axios from "axios";
+
 const router = new Navigo(location.origin);
-location.origin;
-router;
 
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `${Header(st)} ${Nav(
@@ -18,18 +19,27 @@ function render(st = state.Home) {
   render();
 }
 
+router
 
+  .on(":page", params => {
+    render(state[capitalize(params.page)]);
+  })
+  .on("/", () => render())
+  .resolve();
 
-router.on(":page", params => {
-  console.log(params.page);
-});
+//<a class="button"><a href="./_link.tolowerCase"/" data-nagio#>qdt lehone""Orga]ized"}
+//} data navigo.> data navigo>${link"}</a></li>,
 
-on("/", () => render()) .recolve())
-<a class="button"><a href="./_link.tolowerCase"/" data-nagio#>qdt lehone""Orga]ized"}
-} data navigo.> data navigo>${link"}</a></li>,
+//function createListHTML(links){
+//return links .map(link=> `<a class="button"><a href="./${_link.tolowerCase()" data-navigo>${link}</a></li>`).join(" ");
+//}
 
-router.upread list
+axios
 
-function createListHTML(links){
-  return links .map(link=> `<a class="button"><a href="./${_link.tolowerCase()" data-navigo>${link}</a></li>`).join(" ");
-}
+  .get("https://jsonplaceholder.typicode.com/posts")
+  .then(results => {
+    state.Resources.posts = results.data;
+    if (capitalize(router.lastRouteResolved().url.slice(1)) === "/Resources")
+      render(state.Resources);
+  })
+  .catch(error => console.error(error));
