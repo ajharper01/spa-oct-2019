@@ -2,19 +2,18 @@ function createSourceHTML(resources) {
   return resources
     .map(({ title, sources }) => {
       return `
-      <article>
         <h2>${title}</h2>
         <img src=${pictures}/>
         <p>${sources}</p>
-      </article>
     `;
     })
     .join(" ");
 }
 
-export default ({ resources }) => `
+/*export default ({ resources }) => `
   ${createSourceHTML(resources)}
-`;
+`;*/
+
 export default `<div class="mobile-hidden"></div>
       <div id="Organized" class="flex align-center justify-center"></div>
       <div id="Resources" class="flex flex--wrap justify-space-around">
