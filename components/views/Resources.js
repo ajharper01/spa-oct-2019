@@ -1,31 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Resources</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css"/>
+function createSourceHTML(resources) {
+  return resources
+    .map(({ title, sources }) => {
+      return `
+        <h2>${title}</h2>
+        <img src=${pictures}/>
+        <p>${sources}</p>
+    `;
+    })
+    .join(" ");
+}
 
-      <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Cormorant+SC|Gruppo|Metamorphous|Tangerine|&display=swap" rel="stylesheet"/>
+/*export default ({ resources }) => `
+  ${createSourceHTML(resources)}
+`;*/
 
-      <link rel="stylesheet" href="../styles.css"/>
-  </head>
-  <body>
-    <header>
-      <h1>Resources</h1>
-    </header>
-    <nav>
-      <ul class="flex justify-space-around">
-        <li class="button"><a href="../">Home</a></li class="button">
-        <li class="button"><a href="../Contact/">Contact</a></li class="button">
-        <li class="button"><a href="#">Resources</a></li class="button">
-        <li class="button"><a href="../Keep/">Keep</a></li class="button">
-        <li class="button"><a href="../Method/">Method</a></li>
-      </ul>
-    </nav>
-    <main>
-      <div class="mobile-hidden"></div>
+export default `<div class="mobile-hidden"></div>
       <div id="Organized" class="flex align-center justify-center"></div>
       <div id="Resources" class="flex flex--wrap justify-space-around">
         <div class="card">
@@ -108,8 +97,4 @@
           <p><a href="https://www.lynda.com/Firebase-tutorials/9020-0.html">Firebase Tutorial $$</a></p>
           <p><a href="https://www.udemy.com/course/learning-firebase/">Firebase Training $</a></p>
         </div>
-      </div>
-    </main>
-    <footer class="flex">&copy; TEAM DREAM, Inc 2020</footer>
-  </body>
-</html>
+      </div>`;
