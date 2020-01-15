@@ -1,4 +1,4 @@
-function createArticleHTML(resources) {
+function createSourceHTML(resources) {
   return resources
     .map(({ title, sources }) => {
       return `
@@ -13,7 +13,7 @@ function createArticleHTML(resources) {
 }
 
 export default ({ resources }) => `
-  ${createArticleHTML(resources)}
+  ${createSourceHTML(resources)}
 `;
 export default `<div class="mobile-hidden"></div>
       <div id="Organized" class="flex align-center justify-center"></div>
