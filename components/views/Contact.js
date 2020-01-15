@@ -1,4 +1,4 @@
-export default `<div>
+export default st => `<div>
         <form class="contact-form" method="POST" name="contact">
           <div>
             <label for="Name">Name:</label>
@@ -21,5 +21,5 @@ export default `<div>
             <textarea name="Msg" id="Msg" cols="80" rows="10"placeholder="Let us know how we can help!"></textarea>
           </div>
           <button>Submit</button>
-        <form>
+        </form>
       </div>`;

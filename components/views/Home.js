@@ -1,4 +1,4 @@
-export default `<div class="mobile-hidden"></div>
+export default st => `<div class="mobile-hidden"></div>
       <div id="mainPageImage" class="flex align-center justify-center">
         <a href="./Contact/" class="button">Need...</a>
       </div>
