@@ -1,14 +1,14 @@
-function createSourceHTML(resources) {
-  return resources
-    .map(({ title, sources }) => {
-      return `
-        <h2>${title}</h2>
-        <img src=${pictures}/>
-        <p>${sources}</p>
-    `;
-    })
-    .join(" ");
-}
+// function createSourceHTML(resources) {
+//   return resources
+//     .map(({ title, sources }) => {
+//       return `
+//         <h2>${title}</h2>
+//         <img src=${pictures}/>
+//         <p>${sources}</p>
+//     `;
+//     })
+//     .join(" ");
+// }
 
 /*export default ({ resources }) => `
   ${createSourceHTML(resources)}
