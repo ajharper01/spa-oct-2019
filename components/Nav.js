@@ -2,7 +2,7 @@ function createListHTML(links) {
   return links
     .map(
       link =>
-        `<li class="button"><a href="./${link.toLowerCase()}/" data-navigo>${link}</a></li>`
+        `<a href="./${link.toLowerCase()}/" data-navigo> <li class="button">${link}</li></a>`
     )
     .join(" ");
 }

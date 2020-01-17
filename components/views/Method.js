@@ -1,4 +1,4 @@
-export default () => `<div>
+export default `<div>
         <a href="https://business.tutsplus.com/articles/top-brainstorming-techniques--cms-27181">
         <figure><img src="https://live.staticflickr.com/2846/9472941659_bc592c5cd6_b.jpg" alt=""/></figure></a>
         <h2>Brainstorming</h2>

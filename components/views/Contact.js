@@ -1,4 +1,4 @@
-export default st => `<div>
+export default `<div>
         <form class="contact-form" method="POST" name="contact">
           <div>
             <label for="Name">Name:</label>
