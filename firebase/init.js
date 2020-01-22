@@ -1,5 +1,5 @@
-import firebase from "@firebase/app";
+// import firebase from "@firebase/app";
 
-import config from "./config";
+// import config from "./config";
 
-export default firebase.initializeApp(config);
+// export default firebase.initializeApp(config);
